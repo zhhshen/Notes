@@ -1,0 +1,9 @@
+{
+  "name": "event source",
+  "version": "0.1.0",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.14.11"
+  }
+}

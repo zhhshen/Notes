@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务器推送事件</title>
+</head>
+<body>
+    <h3>服务器推送事件</h3>
+    <p>结果是：</p>
+    <div id="result"></div>
+    <script>
+        if (!!window.EventSource) {
+            var source = new EventSource('http://localhost:3000/es')
+            source.addEventListener('test', function (e){
+                document.getElementById('result').innerHTML += e.data + '\n'
+            })
+            source.addEventListener('error', function (e){
+                console.log(e)
+                if (e.target.readyState === 0) {
+                    source.close()
+                }
+            })
+        } else {
+            console.log('Your browser does not support EventSource !')
+        }
+    </script>
+</body>
+</html>

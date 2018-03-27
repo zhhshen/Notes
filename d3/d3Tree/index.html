@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>d3实现树形图</title>
+    <style>
+        svg {
+            border: 1px solid #ddd;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .node circle {
+            fill: #ddd;
+        }
+
+        .node text {
+            font: 10px sans-serif;
+            color: #ddd;
+        }
+
+        .node--internal circle {
+            fill: red;
+        }
+
+        .node--internal text {
+            text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+        }
+
+        .link {
+            fill: none;
+            stroke: #000;
+            stroke-opacity: 0.4;
+            stroke-width: 1.5px;
+        }
+
+        form {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        .node-html table {
+            width: 200px;
+        }
+
+        table tr td {
+            padding: 20px;
+        }
+
+        #body {
+            position: relative;
+        }
+
+        .node-tip {
+            position: absolute;
+        }
+
+        svg foreignObject p {
+            color: red
+        }
+
+        table {
+            width: 100px;
+        }
+
+        img {
+            width: 1920px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <svg width="960" height="1200">
+    </svg>
+    </div>
+    <div id="body"></div>
+    <div class="viz-main">
+
+    </div>
+    <script src="/dist/build.js"></script>
+</body>
+
+</html>

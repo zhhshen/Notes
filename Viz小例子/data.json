@@ -1,0 +1,5 @@
+{
+    "data": "digraph { x -> y -> z; }",
+    "status": 0,
+    "message": "获取成功"
+}
